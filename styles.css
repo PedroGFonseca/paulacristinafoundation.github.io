@@ -88,23 +88,42 @@ a:hover {
 }
 
 .section {
-    padding: 5rem 0;
+    padding: 4rem 0;
 }
 
 .section-light {
     background-color: var(--light-blue);
 }
 
-.section-pink {
-    background-color: var(--highlight-pink);
+.section-dark {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-top: 5px solid var(--highlight-pink);
+    border-bottom: 5px solid var(--highlight-pink);
+}
+
+.section-dark h2,
+.section-dark h3,
+.section-dark p,
+.section-dark strong {
     color: var(--white);
 }
 
-.section-pink h2,
-.section-pink h3,
-.section-pink p,
-.section-pink strong {
-    color: var(--white);
+.section-dark .section-subtitle {
+    color: var(--light-blue);
+}
+
+.section-dark .section-title::after {
+    background-color: var(--highlight-pink);
+}
+
+.section-dark .pink-heading {
+    color: var(--highlight-pink);
+}
+
+/* Pink dividers between sections */
+.section + .section {
+    border-top: 4px solid var(--highlight-pink);
 }
 
 .section-title {
@@ -129,7 +148,7 @@ a:hover {
     text-align: center;
     font-size: 1.125rem;
     color: var(--text-light);
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
 /* Buttons */
@@ -175,7 +194,7 @@ a:hover {
 }
 
 .logo-img {
-    height: 110px;
+    height: 140px;
     width: auto;
 }
 
@@ -238,7 +257,7 @@ a:hover {
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(98, 193, 218, 0.85), rgba(98, 193, 218, 0.85)),
-                url('PCF_DESIGN_elements/website_image.png') center/cover no-repeat;
+                url('images/website_image.png') center/cover no-repeat;
     min-height: 600px;
     display: flex;
     align-items: center;
@@ -246,6 +265,7 @@ a:hover {
     text-align: center;
     color: var(--white);
     padding: 4rem 2rem;
+    border-top: none;
 }
 
 .hero-content {
@@ -276,7 +296,7 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 0;
 }
 
 .about-item h2 {
@@ -290,6 +310,7 @@ a:hover {
     font-size: 1.125rem;
     text-align: center;
     color: var(--primary-blue);
+    padding: 3rem 0;
 }
 
 .about-description p {
@@ -301,7 +322,7 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 0;
 }
 
 .program-card {
@@ -327,7 +348,7 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .team-member {
@@ -341,8 +362,9 @@ a:hover {
 .team-note {
     text-align: center;
     font-style: italic;
-    color: var(--text-light);
-    margin-top: 2rem;
+    color: var(--light-blue);
+    margin-top: 1.5rem;
+    margin-bottom: 0;
 }
 
 /* ANBI Section */
@@ -372,13 +394,13 @@ a:hover {
 /* Contact Section */
 .contact-info {
     max-width: 700px;
-    margin: 2rem auto;
+    margin: 1.5rem auto 0;
 }
 
 .contact-email {
     font-size: 1.5rem;
     font-weight: 800;
-    color: var(--highlight-pink);
+    color: var(--primary-blue);
     margin-bottom: 1rem;
 }
 
@@ -405,7 +427,7 @@ a:hover {
     }
 
     .logo-img {
-        height: 50px;
+        height: 70px;
     }
 
     .hero-logo {
@@ -447,7 +469,7 @@ a:hover {
     }
 
     .section {
-        padding: 3rem 0;
+        padding: 2.5rem 0;
     }
 
     .programs-grid,
