@@ -175,7 +175,7 @@ a:hover {
 }
 
 .logo-img {
-    height: 160px;
+    height: 80px;
     width: auto;
 }
 
@@ -201,6 +201,38 @@ a:hover {
 
 .nav-menu .btn-primary:hover {
     color: var(--white);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 101;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-blue);
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
 /* Hero Section */
@@ -373,7 +405,7 @@ a:hover {
     }
 
     .logo-img {
-        height: 60px;
+        height: 50px;
     }
 
     .hero-logo {
@@ -388,14 +420,30 @@ a:hover {
         font-size: 1.125rem;
     }
 
+    .hamburger {
+        display: flex;
+    }
+
     .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
         flex-direction: column;
-        gap: 1rem;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 2rem 0;
+        gap: 1.5rem;
+    }
+
+    .nav-menu.active {
+        left: 0;
     }
 
     .navbar .container {
-        flex-direction: column;
-        gap: 1rem;
+        justify-content: space-between;
     }
 
     .section {
@@ -409,6 +457,14 @@ a:hover {
 
     .about-grid {
         grid-template-columns: 1fr;
+    }
+
+    .anbi-block {
+        padding: 1.5rem;
+    }
+
+    .contact-email {
+        font-size: 1.25rem;
     }
 }
 
@@ -428,6 +484,14 @@ a:hover {
     .btn-large {
         padding: 0.875rem 2rem;
         font-size: 1rem;
+    }
+
+    .anbi-block {
+        padding: 1rem;
+    }
+
+    .contact-email {
+        font-size: 1.125rem;
     }
 }
 

@@ -19,6 +19,11 @@
             <a href="#home" class="logo">
                 <img src="PCF_DESIGN_elements/pngs.ai/logos/color_logo_no_background.png" alt="Paula Cristina Foundation" class="logo-img">
             </a>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -178,7 +183,7 @@
         </div>
     </footer>
 
-    <!-- Smooth Scroll Script -->
+    <!-- Smooth Scroll & Hamburger Menu Script -->
     <script>
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -188,7 +193,24 @@
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
+                
+                // Close mobile menu after clicking a link
+                const navMenu = document.querySelector('.nav-menu');
+                const hamburger = document.querySelector('.hamburger');
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
             });
+        });
+
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
         });
     </script>
 </body>
