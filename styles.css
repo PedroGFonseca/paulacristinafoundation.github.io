@@ -299,6 +299,19 @@ a:hover {
     margin-bottom: 0;
 }
 
+.about-item {
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(30, 94, 141, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(30, 94, 141, 0.12);
+}
+
 .about-item h2 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
@@ -425,6 +438,11 @@ a:hover {
     margin: 1.5rem auto 0;
 }
 
+/* Add bottom padding to contact section to create intentional space before footer */
+#contact.section {
+    padding-bottom: 5rem;
+}
+
 .contact-email {
     font-size: 1.5rem;
     font-weight: 800;
@@ -437,7 +455,8 @@ a:hover {
     background-color: var(--primary-blue);
     color: var(--white);
     padding: 2rem 0;
-    margin-top: 4rem;
+    margin-top: 0;
+    border-top: 4px solid var(--highlight-pink);
 }
 
 .footer p {
