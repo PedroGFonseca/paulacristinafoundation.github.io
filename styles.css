@@ -388,7 +388,35 @@ a:hover {
 }
 
 .anbi-block p {
+    margin-bottom: 1rem;
+}
+
+.anbi-block p:last-child {
+    margin-bottom: 0;
+}
+
+.anbi-block ul {
+    margin: 0.75rem 0 1rem 0;
+    padding-left: 2rem;
+    list-style-type: disc;
+}
+
+.anbi-block li {
     margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.anbi-block li:last-child {
+    margin-bottom: 0;
+}
+
+.anbi-block p strong {
+    display: inline-block;
+    margin-top: 0.75rem;
+}
+
+.anbi-block p:first-of-type strong {
+    margin-top: 0;
 }
 
 /* Contact Section */
@@ -485,6 +513,10 @@ a:hover {
         padding: 1.5rem;
     }
 
+    .anbi-block ul {
+        padding-left: 1.5rem;
+    }
+
     .contact-email {
         font-size: 1.25rem;
     }
@@ -510,6 +542,15 @@ a:hover {
 
     .anbi-block {
         padding: 1rem;
+    }
+
+    .anbi-block ul {
+        padding-left: 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    .anbi-block li {
+        margin-bottom: 0.75rem;
     }
 
     .contact-email {
